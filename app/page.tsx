@@ -25,7 +25,7 @@ export default function ResumePage() {
             {/* Profile Image */}
             <motion.img
               whileHover={{ scale: 1.05 }}
-              src="/PIC.jpg"
+              src="/pic.jpeg"
               alt="Kaviya"
               className="w-40 h-40 rounded-full border-4 border-white object-cover shadow-2xl"
             />
