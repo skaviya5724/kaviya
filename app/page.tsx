@@ -6,226 +6,202 @@ export default function ResumePage() {
   const skills = [
     "HTML",
     "CSS",
-    "JAVA",
-    "NEXT JS",
-    "PYTHON",
+    "JavaScript",
+    "Next.js",
+    "Tailwind CSS",
+    "Python",
+    "React",
+    "Cloud Computing",
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-950 text-white overflow-hidden relative">
-
-      {/* Background Blur */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-pink-500 rounded-full blur-3xl opacity-20"></div>
-
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
-
-      <div className="relative max-w-6xl mx-auto px-6 py-12">
+    <main className="min-h-screen bg-gray-100 py-10 px-4">
+      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
 
         {/* Header */}
-        <motion.section
-          initial={{ opacity: 0, y: -80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
+        <div className="bg-slate-900 text-white p-10">
+          <div className="flex flex-col md:flex-row items-center gap-8">
 
-          <div className="flex flex-col md:flex-row items-center gap-10">
-
+            {/* Profile Image */}
             <motion.img
-              whileHover={{ scale: 1.08 }}
-              src="/pic.jpeg"
-              alt="profile"
-              className="w-44 h-44 rounded-full border-4 border-pink-500 shadow-2xl object-cover"
+              whileHover={{ scale: 1.05 }}
+              src="/PIC.jpg"
+              alt="Kaviya"
+              className="w-40 h-40 rounded-full border-4 border-white object-cover shadow-2xl"
             />
 
+            {/* Content */}
             <div className="text-center md:text-left">
-
-              <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl font-black">
                 Kaviya K
               </h1>
 
-              <p className="text-2xl mt-4 text-gray-300">
-                Diploma in Computer Engineering - 3rd Year
+              <p className="text-xl mt-3 text-gray-300">
+                Diploma in Computer Engineering — 3rd Year
               </p>
 
-              <p className="mt-3 text-lg text-gray-400">
-                Paavai Polytechnic College - Namakkal, Tamilnadu - 637201
-              </p>
-
-              <div className="mt-6 space-y-2 text-gray-300 text-lg">
+              <div className="mt-5 grid md:grid-cols-2 gap-3 text-sm md:text-base text-gray-300">
+                <p>📍 Namakkal, Tamil Nadu, India</p>
+                <p>📧 s.kaviya5724@gmail.com</p>
+                <p>🏫 Paavai Polytechnic College</p>
                 <p>📞 6369955734</p>
-                <p>✉️ s.kaviya5724@gmail.com</p>
-                <p>📍 Namakkal, Tamilnadu</p>
               </div>
-
             </div>
 
           </div>
+        </div>
 
-        </motion.section>
+        {/* Body */}
+        <div className="grid md:grid-cols-3">
 
-        {/* About */}
-        <motion.section
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
+          {/* Sidebar */}
+          <aside className="bg-gray-50 p-8 border-r">
 
-          <h2 className="text-4xl font-bold text-pink-400">
-            About Me
-          </h2>
+            {/* Skills */}
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-5">
+                Skills
+              </h2>
 
-          <p className="mt-6 text-lg text-gray-300 leading-9">
-            Motivated and enthusiastic Computer Engineering student
-            with strong interest in web development and software
-            technologies. Passionate about creating modern,
-            responsive, and user-friendly applications using
-            frontend and backend technologies. Quick learner with
-            good problem-solving skills and teamwork abilities.
-          </p>
+              <div className="flex flex-wrap gap-3">
+                {skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-        </motion.section>
+            {/* Education */}
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold text-slate-900 mb-5">
+                Education
+              </h2>
 
-        {/* Skills */}
-        <motion.section
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
+              <div className="space-y-4 text-gray-700 leading-7">
+                <div>
+                  <h3 className="font-bold text-lg text-black">
+                    Diploma in Computer Engineering
+                  </h3>
 
-          <h2 className="text-4xl font-bold text-pink-400">
-            Skills
-          </h2>
+                  <p>Paavai Polytechnic College</p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                  <p>Namakkal, Tamil Nadu - 637201</p>
 
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.08 }}
-                className="bg-gradient-to-r from-pink-500 to-purple-600 p-5 rounded-2xl text-center text-lg font-semibold shadow-xl"
-              >
-                {skill}
-              </motion.div>
-            ))}
+                  <p className="mt-2">
+                    Currently Pursuing 3rd Year
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          </div>
+            {/* Achievement */}
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold text-slate-900 mb-5">
+                Achievement
+              </h2>
 
-        </motion.section>
+              <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-lg">
+                <h3 className="text-lg font-bold">
+                  Futures of AI Hackathon
+                </h3>
 
-        {/* Project */}
-        <motion.section
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
+                <p className="mt-3 text-sm leading-7 text-gray-300">
+                  Secured 3rd Place in the Futures of AI Hackathon
+                  by presenting innovative ideas and technical
+                  solutions.
+                </p>
+              </div>
+            </div>
 
-          <h2 className="text-4xl font-bold text-pink-400">
-            Project
-          </h2>
+          </aside>
 
-          <div className="mt-6">
+          {/* Main Content */}
+          <section className="md:col-span-2 p-8">
 
-            <h3 className="text-2xl font-semibold text-white">
-              Online Car Rental System
-            </h3>
+            {/* About */}
+            <div>
+              <h2 className="text-3xl font-black text-black mb-6">
+                About Me
+              </h2>
 
-            <p className="mt-5 text-lg text-gray-300 leading-9">
-              Developed an Online Car Rental System project to simplify
-              the process of booking rental vehicles through a digital
-              platform. The application allows users to browse available
-              cars, check rental prices, and reserve vehicles online.
-            </p>
-
-            <p className="mt-5 text-lg text-gray-300 leading-9">
-              The project includes features such as customer registration,
-              login authentication, vehicle listing, booking management,
-              rental status tracking, and contact support. Admin users can
-              manage car details, customer records, and booking information
-              efficiently through the system dashboard.
-            </p>
-
-            <p className="mt-5 text-lg text-gray-300 leading-9">
-              The project was designed with responsive UI principles to
-              ensure smooth usage across desktop and mobile devices. It
-              improved understanding of frontend development, database
-              handling, and real-time user interaction in web applications.
-            </p>
-
-          </div>
-
-        </motion.section>
-
-        {/* Education */}
-        <motion.section
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
-
-          <h2 className="text-4xl font-bold text-pink-400">
-            Education
-          </h2>
-
-          <div className="mt-6 text-lg text-gray-300 leading-9">
-            <p className="text-2xl font-semibold text-white">
-              Diploma in Computer Engineering
-            </p>
-
-            <p className="mt-2">
-              Paavai Polytechnic College
-            </p>
-
-            <p>
-              Namakkal, Tamilnadu - 637201
-            </p>
-
-            <p className="mt-2">
-              Currently Pursuing 3rd Year
-            </p>
-          </div>
-
-        </motion.section>
-
-        {/* Achievements */}
-        <motion.section
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
-
-          <h2 className="text-4xl font-bold text-pink-400">
-            Achievements
-          </h2>
-
-          <div className="mt-6 text-lg text-gray-300 leading-9">
-
-            <div className="bg-gradient-to-r from-purple-600 to-pink-500 p-6 rounded-2xl shadow-xl">
-
-              <h3 className="text-2xl font-semibold text-white">
-                AI Futures Hackathon
-              </h3>
-
-              <p className="mt-3">
-                Participated in the AI Futures Hackathon and secured
-                Third Place. Successfully presented innovative ideas
-                and received certification for outstanding performance
-                in the competition.
+              <p className="text-gray-700 leading-8 text-lg">
+                Motivated and enthusiastic Computer Engineering student
+                with strong interest in web development and software
+                technologies. Passionate about building responsive,
+                modern, and user-friendly applications using frontend
+                and backend technologies. Quick learner with excellent
+                teamwork and problem-solving skills.
               </p>
-
             </div>
 
-          </div>
+            {/* Project */}
+            <section className="mt-12">
+              <h2 className="text-3xl font-black text-black mb-6">
+                Project
+              </h2>
 
-        </motion.section>
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
 
+                <h3 className="text-2xl font-bold text-black">
+                  Online Car Rental System
+                </h3>
+
+                <ul className="list-disc ml-6 mt-5 space-y-4 text-gray-700 leading-8">
+
+                  <li>
+                    Developed a complete Online Car Rental System
+                    for managing vehicle rentals through a digital platform.
+                  </li>
+
+                  <li>
+                    Created features for customer registration,
+                    login authentication, vehicle listing,
+                    and online booking management.
+                  </li>
+
+                  <li>
+                    Implemented rental status tracking and customer
+                    support functionalities for better user experience.
+                  </li>
+
+                  <li>
+                    Designed an admin dashboard to manage car details,
+                    booking records, and customer information efficiently.
+                  </li>
+
+                  <li>
+                    Used HTML, CSS, JavaScript, Python,
+                    and Next.js technologies during development.
+                  </li>
+
+                </ul>
+
+              </div>
+            </section>
+
+            {/* Career Objective */}
+            <section className="mt-12">
+              <h2 className="text-3xl font-black text-black mb-6">
+                Career Objective
+              </h2>
+
+              <div className="bg-slate-50 border border-gray-200 rounded-2xl p-6">
+                <p className="text-gray-700 leading-8 text-lg">
+                  Seeking an opportunity to enhance my technical
+                  knowledge and practical skills in software
+                  development and web technologies while contributing
+                  effectively to organizational growth.
+                </p>
+              </div>
+            </section>
+
+          </section>
+        </div>
       </div>
-
     </main>
   );
 }
