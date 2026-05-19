@@ -33,7 +33,7 @@ export default function ResumePage() {
 
             <motion.img
               whileHover={{ scale: 1.08 }}
-              src="/PIC.jpg"
+              src="/pic.jpeg"
               alt="profile"
               className="w-44 h-44 rounded-full border-4 border-pink-500 shadow-2xl object-cover"
             />
