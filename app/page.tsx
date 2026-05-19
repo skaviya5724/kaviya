@@ -1,204 +1,159 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function ResumePage() {
   const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
     "Next.js",
-    "Tailwind CSS",
-    "Python",
-    "React",
-    "Cloud Computing",
+    "HTML",
+    " CSS",
+    "JAVA",
+    "NEXT JS",
+    "PYTHON",
+  ];
+
+  const projects = [
+    "Online Rental Car Booking System",
   ];
 
   return (
     <main className="min-h-screen bg-gray-100 py-10 px-4">
-      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
-
+      <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
         {/* Header */}
-        <div className="bg-slate-900 text-white p-10">
-          <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="bg-slate-900 text-white p-8">
+          <h1 className="text-4xl font-bold">deepika</h1>
 
-            {/* Profile Image */}
-            <motion.img
-              whileHover={{ scale: 1.05 }}
-              src="/pic.jpeg"
-              alt="Kaviya"
-              className="w-40 h-40 rounded-full border-4 border-white object-cover shadow-2xl"
-            />
+          <p className="text-lg mt-2 text-gray-300">
+            Student
+          </p>
 
-            {/* Content */}
-            <div className="text-center md:text-left">
-              <h1 className="text-5xl md:text-6xl font-black">
-                Kaviya K
-              </h1>
-
-              <p className="text-xl mt-3 text-gray-300">
-                Diploma in Computer Engineering — 3rd Year
-              </p>
-
-              <div className="mt-5 grid md:grid-cols-2 gap-3 text-sm md:text-base text-gray-300">
-                <p>📍 Namakkal, Tamil Nadu, India</p>
-                <p>📧 s.kaviya5724@gmail.com</p>
-                <p>🏫 Paavai Polytechnic College</p>
-                <p>📞 6369955734</p>
-              </div>
-            </div>
-
+          <div className="mt-4 grid md:grid-cols-2 gap-2 text-sm">
+            <p>📍 namakal, Tamil Nadu, India</p>
+            <p>📧 k kaviya</p>
+            <p>📞 +91 6369955724</p>
           </div>
         </div>
 
         {/* Body */}
         <div className="grid md:grid-cols-3">
-
-          {/* Sidebar */}
-          <aside className="bg-gray-50 p-8 border-r">
-
+          {/* Left Sidebar */}
+          <aside className="bg-gray-50 p-6 border-r">
             {/* Skills */}
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-5">
+            <section>
+              <h2 className="text-xl font-semibold mb-4 border-b pb-2">
                 Skills
               </h2>
 
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-medium"
+              <div className="space-y-3">
+                {skills.map((skill) => (
+                  <div
+                    key={skill}
+                    className="bg-slate-900 text-white px-3 py-2 rounded-lg text-sm"
                   >
                     {skill}
-                  </span>
+                  </div>
                 ))}
               </div>
-            </div>
+            </section>
 
             {/* Education */}
-            <div className="mt-12">
-              <h2 className="text-2xl font-bold text-slate-900 mb-5">
+            <section className="mt-10">
+              <h2 className="text-xl font-semibold mb-4 border-b pb-2">
                 Education
               </h2>
 
-              <div className="space-y-4 text-gray-700 leading-7">
-                <div>
-                  <h3 className="font-bold text-lg text-black">
-                    Diploma in Computer Engineering
-                  </h3>
+              <h3 className="font
+              
+              -semibold">Diploma</h3>
+              <p className="text-sm text-gray-600">
+                Computer Science / Information Technology
+              </p>
+            </section>
 
-                  <p>Paavai Polytechnic College</p>
-
-                  <p>Namakkal, Tamil Nadu - 637201</p>
-
-                  <p className="mt-2">
-                    Currently Pursuing 3rd Year
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Achievement */}
-            <div className="mt-12">
-              <h2 className="text-2xl font-bold text-slate-900 mb-5">
-                Achievement
+            {/* Languages */}
+            <section className="mt-10">
+              <h2 className="text-xl font-semibold mb-4 border-b pb-2">
+                Languages
               </h2>
 
-              <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-lg">
-                <h3 className="text-lg font-bold">
-                  Futures of AI Hackathon
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-gray-300">
-                  Secured 3rd Place in the Futures of AI Hackathon
-                  by presenting innovative ideas and technical
-                  solutions.
-                </p>
-              </div>
-            </div>
-
+              <ul className="space-y-2 text-sm">
+                <li>✅ English</li>
+                <li>✅ Tamil</li>
+              </ul>
+            </section>
           </aside>
 
           {/* Main Content */}
           <section className="md:col-span-2 p-8">
-
-            {/* About */}
-            <div>
-              <h2 className="text-3xl font-black text-black mb-6">
-                About Me
+            {/* Profile */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-slate-900">
+                Profile
               </h2>
 
-              <p className="text-gray-700 leading-8 text-lg">
-                Motivated and enthusiastic Computer Engineering student
-                with strong interest in web development and software
-                technologies. Passionate about building responsive,
-                modern, and user-friendly applications using frontend
-                and backend technologies. Quick learner with excellent
-                teamwork and problem-solving skills.
+              <p className="text-gray-700 leading-7">
+                Passionate student and aspiring full-stack developer with knowledge in
+                Next.js, React, Tailwind CSS, and web application development.
+                Interested in building modern websites, learning new technologies,
+                and developing real-world software projects.
               </p>
-            </div>
+            </section>
 
-            {/* Project */}
-            <section className="mt-12">
-              <h2 className="text-3xl font-black text-black mb-6">
-                Project
+            {/* Experience */}
+            <section className="mt-10">
+              <h2 className="text-2xl font-bold mb-6 text-slate-900">
+                Experience
               </h2>
 
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+              <div className="space-y-8">
 
-                <h3 className="text-2xl font-bold text-black">
-                  Online Car Rental System
-                </h3>
 
-                <ul className="list-disc ml-6 mt-5 space-y-4 text-gray-700 leading-8">
+                <div>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <h3 className="text-xl font-semibold">
+                      Next JS Developer
+                    </h3>
+                  </div>
 
-                  <li>
-                    Developed a complete Online Car Rental System
-                    for managing vehicle rentals through a digital platform.
-                  </li>
+                  <p className="text-blue-600 font-medium">
+                    Intern
+                  </p>
 
-                  <li>
-                    Created features for customer registration,
-                    login authentication, vehicle listing,
-                    and online booking management.
-                  </li>
+                  <ul className="list-disc ml-6 mt-3 text-gray-700 space-y-2">
+                    <li>
+                      Built a simple e-commerce website using Next.js and Tailwind CSS.
+                    </li>
 
-                  <li>
-                    Implemented rental status tracking and customer
-                    support functionalities for better user experience.
-                  </li>
+                    <li>
+                      Developed product listing, cart, and responsive user interface features.
+                    </li>
 
-                  <li>
-                    Designed an admin dashboard to manage car details,
-                    booking records, and customer information efficiently.
-                  </li>
-
-                  <li>
-                    Used HTML, CSS, JavaScript, Python,
-                    and Next.js technologies during development.
-                  </li>
-
-                </ul>
-
+                    <li>
+                      Learned API integration and modern frontend development concepts.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </section>
 
-            {/* Career Objective */}
-            <section className="mt-12">
-              <h2 className="text-3xl font-black text-black mb-6">
-                Career Objective
+            {/* Projects */}
+            <section className="mt-10">
+              <h2 className="text-2xl font-bold mb-6 text-slate-900">
+                Projects
               </h2>
 
-              <div className="bg-slate-50 border border-gray-200 rounded-2xl p-6">
-                <p className="text-gray-700 leading-8 text-lg">
-                  Seeking an opportunity to enhance my technical
-                  knowledge and practical skills in software
-                  development and web technologies while contributing
-                  effectively to organizational growth.
-                </p>
+              <div className="grid md:grid-cols-2 gap-5">
+                {projects.map((project) => (
+                  <div
+                    key={project}
+                    className="border rounded-xl p-5 hover:shadow-lg transition bg-white"
+                  >
+                    <h3 className="font-semibold text-lg">{project}</h3>
+
+                    <p className="text-sm text-gray-600 mt-2">
+                      Developed using Next.js, TypeScript, Tailwind CSS, APIs,
+                      and cloud infrastructure.
+                    </p>
+                  </div>
+                ))}
               </div>
             </section>
-
           </section>
         </div>
       </div>
